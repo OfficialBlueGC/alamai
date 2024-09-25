@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alamai - Premium Clothing Brand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            outline: none;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #f4f4f4;
+        }
+
+        .header {
+            background: #000;
+            color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: #f4f4f4;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .nav a:hover {
+            background: #444;
+            border-radius: 5px;
+        }
+
+        .banner {
+            background: url('alabanner.png') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .banner h2 {
+            font-size: 2em;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card .icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #f4f4f4;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .cta {
+            background: #000;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            padding: 12px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        .checkout-btn::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            width: calc(100% + 12px);
+            height: calc(100% + 12px);
+            border: 2px solid transparent;
+            box-sizing: border-box;
+            z-index: -1;
+            transition: all 0.2s ease;
+            border-radius: 0px;
+            scale: 1.05;
+            border-radius: 30px;
+        }
+
+        .checkout-btn:hover::before {
+            border-color: white;
+            scale: 1;
+        }
+
+        .checkout-btn:hover {
+            opacity: 0.8;
+            scale: 1.07;
+        }
+
+        .footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #aaa;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .banner h2 {
+                font-size: 1.5em;
+                padding: 5px 10px;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>ALAMAI</h1>
+        <p>Great Quality. Amazing Designs. For Everyone.</p>
+        <p>alamai.shop/en-ae/ (Coming Soon!)</p>
+    </div>
+
+    <div class="banner">
+        <h2>Elevating Everyday Fashion with Unique Styles</h2>
+    </div>
+    <div class="content">
+        <h2>Welcome to Alamai!</h2>
+        <p>At Alamai, we believe that fashion should be expressive and creative. That's why we've dedicated ourselves to
+            crafting clothing that combines the best of both quality and design. Our collections are more than just
+            pieces of fabric; they're statements of personality, individuality, and passion.</p>
+        <p>From vibrant t-shirts that pop with color to hoodies that wrap you in comfort, we have something for
+            everyone. Whether you're looking to make a bold statement or keep it subtle and sophisticated, our designs
+            are crafted to suit your style. We don't just make clothes; we create experiences.</p>
+        <p>Every stitch, every print, and every detail in our collection is carefully designed to offer unparalleled
+            quality. We use only the finest materials to ensure that each piece is as durable as it is stylish. Our
+            commitment to excellence means you get the best, every time.</p>
+        <p>Our t-shirts and hoodies come in a wide range of sizes and styles for boys, girls, men, and women, ensuring
+            that everyone can find their perfect fit. With an ever-growing collection of fresh designs, there's always
+            something new to discover. Don't settle for ordinary; choose Alamai and redefine your wardrobe.</p>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-tshirt"></i>
+            </div>
+            <h3>Premium T-Shirts</h3>
+            <p>Our t-shirts are crafted from the softest fabrics, ensuring comfort and style all day long. Choose from a
+                variety of designs that cater to every personality.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-hoodie"></i>
+            </div>
+            <h3>Stylish Hoodies</h3>
+            <p>Stay cozy and fashionable with our collection of hoodies. Perfect for any season, our hoodies are
+                designed to keep you comfortable without compromising on style.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <h3>Unique Designs</h3>
+            <p>We don't follow trends; we set them. Each design is a piece of art, crafted to make you stand out in a
+                crowd. Express yourself with our exclusive collections.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3>Eco-Friendly</h3>
+            <p>Our commitment to the environment is reflected in our sustainable practices. We use eco-friendly
+                materials and processes to create fashion that cares for the planet.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>For Everyone</h3>
+            <p>Fashion knows no bounds. Our collections are designed for all genders and ages, because great style is
+                universal. Discover the perfect fit for your unique style.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-gift"></i>
+            </div>
+            <h3>Exclusive Offers</h3>
+            <p>Sign up now and be the first to know about our exclusive offers and latest collections. Enjoy special
+                discounts and rewards when you shop with us.</p>
+        </div>
+    </div>
+    <div class="cta">
+        <h2>Be a Part of the Alamai Community!</h2>
+        <p>Join our community today and be the first to hear about our latest collections and exclusive deals. Sign up
+            now to receive a **10% discount (up to AED 30)** on your first order after launch! We make tons of great
+            quality and unique designs on t-shirts and hoodies for boys, girls, men, and women. Be the first to
+            experience fashion that’s not just stylish but also crafted with passion and precision.</p>
+        <button class="checkout-btn">Sign up now!</button>
+    </div>
+
+    <div class="footer">
+        <p>Follow us on social media for the latest updates:</p>
+        <p>
+            <a href="https://www.instagram.com/alamai.shop/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" style="display: none;"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" style="display: none;"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" style="display: none;"><i class="fa-brands fa-youtube"></i></a>
+        </p>
+        <h3 style="text-align: center;">Alamai | Blue GC</h3>
+        <p style="text-align: center; margin-top: -12px">&copy; 2019 - 2024 Blue Group Intelicom Coop. 2024 Alamai. All Rights Reserved</p>
+        <b>Powered By Blue News | Blue GC Cloud Platform</b>
+    </div>
+</body>
+
+</html>

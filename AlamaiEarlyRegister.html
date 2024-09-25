@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up to Alamai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+                * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            outline: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-top: 6px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 93%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .login-container input[type="email"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: black;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.336);
+            outline: none;
+            scale: 1.06;
+        }
+
+        .login-container input[type="password"]:focus {
+            transform: translateY(-3px);
+        }
+
+        .sub,
+        .otr {
+            background-color: black;
+            color: #fff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .sub {
+            opacity: 0.5;
+        }
+
+        .otr {
+            margin-top: 10px;
+            background-color: transparent;
+            color: black;
+            border: 1px solid rgb(202, 202, 202);
+        }
+
+        .otr:hover {
+            background-color: rgb(236, 236, 236);
+        }
+
+        .sub:hover {
+            opacity: 0.7;
+        }
+
+        .login-container button:active {
+            transform: scale(0.98);
+        }
+
+        .login-container p {
+            margin-top: 1rem;
+            color: #666;
+        }
+
+        /* Additional animations */
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .sub {
+            animation: slideIn 1s ease;
+            pointer-events: none;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .custom-checkbox:hover {
+            background-color: #ccc;
+        }
+
+        .custom-checkbox i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.3) rotate(-30deg);
+            opacity: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        .custom-checkbox.checked {
+            background-color: black;
+        }
+
+        .custom-checkbox.checked i {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+
+        .sub.enabled {
+            cursor: pointer;
+            opacity: 1;
+            pointer-events: all;
+            background-color: black;
+        }
+
+        @media (max-width: 1260px) {
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-image: url('img/');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                overflow-x: hidden;
+            }
+
+            .login-container {
+                background-color: #fff;
+                padding: 2rem;
+                border-top: 6px solid black;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+                text-align: center;
+                margin-left: 0%;
+                scale: 1.2;
+            }
+
+            .Loginlogo {
+                width: 70px;
+                scale: 3;
+                user-select: none;
+            }
+
+            .login-container h2 {
+                color: #333;
+                margin-bottom: 1.5rem;
+                transform: translateY(0px) scale(1);
+            }
+
+        }
+
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(0px) scale(1.1);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script type="module" src="register.js" defer></script>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <img src="img/Alamai.png" style="width: 70px; scale: 3; user-select: none;">
+        <h2>Sign up</h2>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="checkbox-container">
+                <div class="custom-checkbox" id="checkbox">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <label for="checkbox">I agree to the <a style="text-decoration: none; color: black;" href="#">Terms of
+                        Conditions</a></label>
+            </div>
+            <button type="submit" id="submit" disabled class="sub">Create Account</button>
+            <div id="message"></div>
+            <p style="margin: 10px; transform: translateY(8px); color: black; font-weight: bold;">OR</p>
+            <p id="error-message" style="color: red;"></p>
+        </form>
+        <p style="margin: 0; margin-top: 30px; margin-bottom: -2px; user-select: none;">Powered by</p>
+        <img style="user-select: none;" draggable="false" src="img/Blue GC Account Black.png" width="180px">
+    </div>
+
+    <script>
+        const checkbox = document.getElementById('checkbox');
+        const submitBtn = document.getElementById('submit');
+
+        checkbox.addEventListener('click', () => {
+            checkbox.classList.toggle('checked');
+
+            if (checkbox.classList.contains('checked')) {
+                submitBtn.disabled = false;
+                submitBtn.classList.add('enabled');
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.classList.remove('enabled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
