@@ -24,7 +24,7 @@ submit.addEventListener("click", function (event) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      window.location.href = 'login.html';
+      window.location.href = 'signedup.html';
       messageDiv.textContent ="Logging In...";
       messageDiv.style.color = "black";
     })
